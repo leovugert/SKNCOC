@@ -1,0 +1,335 @@
+/* Define the animation keyframes */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('background.svg'); /* Path to your background image */
+    background-size: cover; /* Make the image cover the entire background */
+    background-attachment: fixed; /* Keep the background image fixed */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+}
+
+header.banner {
+    background-color: #040c7d;
+    color: #040c7d;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 60px;
+}
+
+.banner-tabs {
+    display: flex;
+    gap: 20px;
+}
+
+.banner-tab {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.banner-tab::before,
+.banner-tab::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: white;
+    transition: width 0.3s ease;
+    z-index: -1; /* Ensure under text */
+    
+}
+
+.banner-tab::before {
+    top: 0;
+}
+
+.banner-tab::after {
+    bottom: 0;
+}
+
+.banner-tab:hover::before,
+.banner-tab:hover::after {
+    width: 100%;
+}
+
+.banner-tab:hover {
+    color: #040c7d; /* Change text color on hover */
+    transition: color 0.3s ease;
+}
+
+.join-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #007bff; /* Blue background color */
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.join-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    color: white; /* Maintain text color */
+}
+
+
+
+.body-container {
+    margin: 80px auto 0 auto; /* Adjust margin to account for fixed banner */
+}
+
+
+.body-content {
+    display: none;
+    margin-top: 10px;
+}
+
+.body-content.active {
+    display: block;
+}
+
+.images-content {
+    display: none;
+    margin-top: 10px;
+    width: 90%;
+}
+
+.images-content.active {
+    display: block;
+}
+
+
+
+.hero-section {
+    position: relative;
+    height: 450px; /* Adjust height as needed */
+    background-image: url('big-picture.jpg'); /* Path to your big picture */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center; /* Align items to the bottom */
+    justify-content: center; /* Align items to the start (left) */
+    padding: 20px; /* Optional: add padding */
+}
+
+.hero-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-text {
+    font-size: 60px; /* Adjust font size as needed */
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    margin-bottom: 10px; /* Space between text and button */
+}
+
+
+.footer {
+    background-color: #040c7d;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 5%;
+    
+}
+
+.footer-left {
+    flex: 1;
+    display: block; /* Ensures each span occupies full width */
+
+}
+
+
+.footer-tab {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: white;
+    display: block; /* Stacks spans vertically */
+    margin-bottom: 15px; /* Adds space between spans */
+}
+
+.footer-tab-bold {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    display: block; /* Stacks spans vertically */
+    margin-top: 15px;
+    margin-bottom: 15px; /* Adds space between spans */
+}
+
+.footer-tab:hover {
+    color: #373b6e;
+}
+
+.footer-tab-bold:hover {
+    color: #373b6e;
+}
+
+.footer-copyright {
+    flex: 1;
+}
+
+.footer-copyright p {
+    color:white;
+    margin-top: 60px; /* Adjust the bottom margin for the last <p> */
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+}
+  
+.footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+.footer a:hover {
+    text-decoration: none;
+  }
+
+hr {
+    width: 90%; /* Sets the width of the line */
+    border: none; /* Removes default border */
+    height: 1px; /* Sets the height of the line */
+    background-color: #040c7d; /* Sets the color of the line */
+    margin: 50px auto; /* Adjusts spacing above and below the line */
+}
+
+.coming-soon {
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    color: #ffffff; /* White text color */
+    animation: pulse 1.5s infinite alternate; /* Animation definition */
+}
+
+.coming-soon {
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    color: #ffffff; /* White text color */
+    animation: pulse 1.5s infinite alternate; /* Animation definition */
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1); /* Initial scale */
+    }
+    to {
+        transform: scale(1.1); /* Slightly larger scale */
+    }
+}
+
+/* Basic styling for the news section */
+.news-section {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Styling for each news card */
+  .news-card {
+    font-family: 'Lato', sans-serif;
+    width: calc(33.33% - 20px); /* Adjust width to fit three cards in a row */
+    border-left: 1px solid #040c7d;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .news-card img {
+    width: 440px;
+    height: 240px;
+
+  }
+  
+  .date {
+    color: #666;
+    margin-top: 10px;
+  }
+  
+  .title {
+    margin-top: 10px;
+  }
+  
+  .description {
+    margin-top: 10px;
+  }
+  
+  .description a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .description a:hover {
+    text-decoration: none;
+  }
+  
+/* Basic styling for the news section */
+.event-section {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Styling for each news card */
+  .event-card {
+    font-family: 'Lato', sans-serif;
+    width: calc(33.33% - 20px); /* Adjust width to fit three cards in a row */
+    border-left: 1px solid #040c7d;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .event-date {
+    color: #666;
+    margin-top: 10px;
+  }
+  
+  .event-title {
+    margin-top: 10px;
+  }
+  
+  .section-header {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #040c7d;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
